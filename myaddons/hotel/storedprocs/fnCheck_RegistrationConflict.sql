@@ -32,9 +32,7 @@ BEGIN
 	  and id<>reg_id 
 	group by room_id;  
 	
-	-- count(*): use for counting, more than 1 means there is a conflict
-	-- group by: groups the result by room_id
-	
+
 	IF cnt > 0 THEN
 	   msg:='Schedule conflict exists!';
 	ELSE
